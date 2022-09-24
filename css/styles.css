@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+*,
+* ::before,
+*::after {
+  box-sizing: inherit;
+}
 :root {
   --title-text-color: #212121;
   --text-color: #757575;
@@ -10,8 +18,45 @@
   --bng-section-team: #f5f4fa;
   --color-contact: rgba(255, 255, 255, 0.6);
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+button {
+  cursor: pointer;
+}
+address {
+  font-style: normal;
+}
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  outline: 2px solid green;
+}
 
 body {
+  margin: 0;
   background-color: var(--super-waite);
   color: var(--text-color);
   font-family: 'Roboto', san-serif;
@@ -53,6 +98,9 @@ body {
 /*---------------header-------------------------------------------------- -------------------*/
 .header {
   background-color: var(--super-waite);
+
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 /* ------navigation-site */
 .nav .site-nav.current {
@@ -88,15 +136,24 @@ body {
 /* ----------------------------------------------hero------------------------------------ */
 .hero {
   background-color: var(--color-hero-futer-bng);
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 94px;
+  text-align: center;
 }
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--super-waite);
+
+  margin-bottom: 30px;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-btn {
   font-family: inherit;
@@ -109,6 +166,10 @@ body {
   border: transparent;
   color: var(--super-waite);
   background-color: var(--accent-color);
+
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 216px;
 }
 
 .hero-btn:hover,
@@ -118,12 +179,17 @@ body {
 }
 
 /* ------------------------------section-feature--------------------------*/
+.section-feature {
+  margin-bottom: 94px;
+}
 .feature-title {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-text-color);
+
+  margin-bottom: 10px;
 }
 .feature-text {
   font-size: 14px;
@@ -131,19 +197,31 @@ body {
   letter-spacing: 0.03em;
 }
 /*-----------------------seaction-work------------- */
+.section-work {
+  margin-bottom: 94px;
+}
 .work-title {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+
+  margin-bottom: 50px;
 }
 /* --------------------section-team----------------------------- */
 .section-team {
   background-color: var(--bng-section-team);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
+
 .team-card {
   background-color: var(--super-waite);
+}
+.img-team {
+  margin-bottom: 30px;
 }
 
 .team-title {
@@ -152,12 +230,16 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
+
+  margin-bottom: 50px;
 }
 .team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   color: var(--title-text-color);
+
+  margin-bottom: 10px;
 }
 .team-text {
   font-size: 16px;
@@ -172,9 +254,15 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 215px;
 }
+
 .footer {
-  background-color: #2f303a;
+  background-color: var(--color-hero-futer-bng);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .address-work {
   font-style: normal;
@@ -182,6 +270,10 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--super-waite);
+
+  display: inline-block;
+  margin-bottom: 9px;
+  margin-left: 215px;
 }
 .contact-footer {
   font-style: normal;
@@ -189,6 +281,10 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  display: inline-block;
+  margin-bottom: 9px;
+  margin-left: 215px;
 }
 .contact-footer:hover,
 .contact-footer:focus {
@@ -197,6 +293,10 @@ body {
 /* --------------------page PORTFOLIO--------------------------------------------------------------- */
 
 /*----------------- filter --------------*/
+.filter-list {
+  background-color: aqua;
+  margin-bottom: 34px;
+}
 .btn-filter {
   font-family: inherit;
   background-color: var(--bng-section-team);
@@ -216,11 +316,16 @@ body {
   background-color: var(--accent-color);
 }
 /* ----------------section-project------------------------- */
+.img-project {
+  margin-bottom: 20px;
+}
 .title-list {
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
 }
 .project-text {
   font-size: 16px;
