@@ -14,7 +14,6 @@ html {
   --super-waite: #ffffff;
   --accent-btn: #188ce8;
   --color-hero-futer-bng: #2f303a;
-  /* --bng-color-saite: #f5f5f5; */
   --bng-section-team: #f5f4fa;
   --color-contact: rgba(255, 255, 255, 0.6);
 }
@@ -52,7 +51,11 @@ img {
   padding-right: 15px;
   margin: 0 auto;
 
-  outline: 2px solid green;
+  /* outline: 2px solid green; */
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 body {
@@ -80,7 +83,7 @@ body {
 .list {
   list-style: none;
 }
-/* -------------logo----------------- */
+/* -------------logo--------------------------- */
 .logo {
   color: var(--super-blask);
 }
@@ -98,35 +101,60 @@ body {
 /*---------------header-------------------------------------------------- -------------------*/
 .header {
   background-color: var(--super-waite);
-
-  padding-top: 24px;
-  padding-bottom: 25px;
+  border: 1px solid #ececec;
 }
-/* ------navigation-site */
+.header-page {
+  display: flex;
+  align-items: center;
+}
+/* -------------------------navigation-site -----------------------*/
+
 .nav .site-nav.current {
   color: var(--accent-color);
 }
+.nav {
+  display: flex;
+  margin-left: 93px;
+  gap: 50px;
+}
+
+/* .nav .item + .item {
+  margin-left: 50px;
+} */
+
 .site-nav {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
-}
-.site-nav:hover,
-.site-nav:focus {
-  color: var(--accent-color);
-}
-.site-nav {
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-/* ---------------contacts---- */
+.site-nav:hover,
+.site-nav:focus {
+  color: var(--accent-color);
+}
+
+/* -------------------------------contacts----------------- */
+.list-contact {
+  display: flex;
+  gap: 50px;
+  margin-left: auto;
+}
+
 .contact {
   color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  display: block;
 }
 .contact:hover,
 .contact:focus {
@@ -135,27 +163,35 @@ body {
 
 /* ----------------------------------------------hero------------------------------------ */
 .hero {
-  background-color: var(--color-hero-futer-bng);
-
   padding-top: 200px;
   padding-bottom: 200px;
   margin-bottom: 94px;
   text-align: center;
+  background-color: var(--color-hero-futer-bng);
 }
+
 .hero-title {
+  margin-bottom: 30px;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--super-waite);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--super-waite);
-
-  margin-bottom: 30px;
-  max-width: 696px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .hero-btn {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 216px;
+
+  color: var(--super-waite);
+  background-color: var(--accent-color);
+
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -164,12 +200,6 @@ body {
   letter-spacing: 0.06em;
   border-radius: 4px;
   border: transparent;
-  color: var(--super-waite);
-  background-color: var(--accent-color);
-
-  display: inline-block;
-  padding: 10px 32px;
-  min-width: 216px;
 }
 
 .hero-btn:hover,
@@ -179,8 +209,10 @@ body {
 }
 
 /* ------------------------------section-feature--------------------------*/
-.section-feature {
-  margin-bottom: 94px;
+
+.feature-list {
+  display: flex;
+  gap: 30px;
 }
 .feature-title {
   font-size: 14px;
@@ -197,8 +229,10 @@ body {
   letter-spacing: 0.03em;
 }
 /*-----------------------seaction-work------------- */
-.section-work {
-  margin-bottom: 94px;
+
+.work-list {
+  display: flex;
+  gap: 30px;
 }
 .work-title {
   font-size: 36px;
@@ -213,12 +247,16 @@ body {
 .section-team {
   background-color: var(--bng-section-team);
 
-  padding-top: 60px;
-  padding-bottom: 60px;
+  text-align: center;
+}
+.team-list {
+  display: flex;
+  gap: 30px;
 }
 
 .team-card {
   background-color: var(--super-waite);
+  flex-basis: calc((100%-90px) / 4);
 }
 .img-team {
   margin-bottom: 30px;
@@ -245,6 +283,7 @@ body {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
 }
 /* ------------------------footer----------------------------- */
 .logo-footer {
@@ -293,11 +332,18 @@ body {
 /* --------------------page PORTFOLIO--------------------------------------------------------------- */
 
 /*----------------- filter --------------*/
+
 .filter-list {
-  background-color: aqua;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
   margin-bottom: 34px;
 }
 .btn-filter {
+  min-width: 73px;
+  display: inline-block;
+  padding: 6px 22px;
+
   font-family: inherit;
   background-color: var(--bng-section-team);
   color: var(--title-text-color);
@@ -316,9 +362,23 @@ body {
   background-color: var(--accent-color);
 }
 /* ----------------section-project------------------------- */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.project-item {
+  background-color: var(--super-waite);
+  width: 370px;
+  border: 1px solid #eeeeee;
+}
 .img-project {
   margin-bottom: 20px;
 }
+.text-item {
+  margin-left: 24px;
+}
+
 .title-list {
   color: var(--title-text-color);
   font-size: 18px;
