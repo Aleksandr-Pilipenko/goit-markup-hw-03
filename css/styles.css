@@ -295,7 +295,6 @@ body {
   letter-spacing: 0.03em;
   display: inline-block;
   margin-bottom: 20px;
-  margin-left: 215px;
 }
 
 .footer {
@@ -312,7 +311,6 @@ body {
 
   display: inline-block;
   margin-bottom: 9px;
-  margin-left: 215px;
 }
 .contact-footer {
   font-style: normal;
@@ -323,7 +321,6 @@ body {
 
   display: inline-block;
   margin-bottom: 9px;
-  margin-left: 215px;
 }
 .contact-footer:hover,
 .contact-footer:focus {
@@ -375,9 +372,6 @@ body {
 .img-project {
   margin-bottom: 20px;
 }
-.text-item {
-  margin-left: 24px;
-}
 
 .title-list {
   color: var(--title-text-color);
@@ -386,10 +380,14 @@ body {
   letter-spacing: 0.06em;
 
   margin-bottom: 4px;
+  margin-left: 24px;
 }
 .project-text {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--text-color);
+
+  margin-left: 24px;
+  margin-bottom: 20px;
 }
