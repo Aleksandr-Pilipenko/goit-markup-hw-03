@@ -101,7 +101,7 @@ body {
 /*---------------header-------------------------------------------------- -------------------*/
 .header {
   background-color: var(--super-waite);
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .header-page {
   display: flex;
